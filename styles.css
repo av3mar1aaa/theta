@@ -8,23 +8,21 @@ html, body {
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  min-height: 100vh;
-  background-image: url("bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  min-height: 100svh;
+  background: #000 url("bg.png") center / cover no-repeat;
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: clamp(16px, 5vw, 32px);
   background: rgba(0, 0, 0, 0.55);
 }
 
@@ -35,15 +33,18 @@ body {
 }
 
 .greeting {
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(1.75rem, 8vw, 4rem);
   font-weight: 800;
   letter-spacing: 0.02em;
-  margin-bottom: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: clamp(1.5rem, 6vw, 2.5rem);
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
+  word-break: break-word;
 }
 
 .brand {
   color: #ff2a2a;
+  white-space: nowrap;
 }
 
 [hidden] {
@@ -52,8 +53,8 @@ body {
 
 .cta {
   display: inline-block;
-  padding: 1rem 2.25rem;
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  padding: clamp(0.85rem, 3vw, 1rem) clamp(1.5rem, 5vw, 2.25rem);
+  font-size: clamp(0.95rem, 4vw, 1.25rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -66,25 +67,40 @@ body {
   border-radius: 4px;
   transition: transform 0.15s ease, background 0.15s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: inherit;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+  touch-action: manipulation;
 }
 
-.cta:hover {
-  background: rgba(255, 42, 42, 0.75);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .cta:hover {
+    background: rgba(255, 42, 42, 0.75);
+    transform: translateY(-2px);
+  }
 }
 
 .cta:active {
   transform: translateY(0);
+  background: rgba(255, 42, 42, 0.75);
 }
 
 .cta--confirmed {
   background: rgba(0, 160, 60, 0.55);
   border-color: rgba(255, 255, 255, 0.85);
   cursor: default;
-  font-family: inherit;
 }
 
-.cta--confirmed:hover {
+@media (hover: hover) {
+  .cta--confirmed:hover {
+    background: rgba(0, 160, 60, 0.55);
+    transform: none;
+  }
+}
+
+.cta--confirmed:active {
   background: rgba(0, 160, 60, 0.55);
   transform: none;
 }
