@@ -17,6 +17,12 @@ body {
   background: #000 url("bg.png") center / cover no-repeat;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-image: url("bg-mobile.png");
+  }
+}
+
 .hero {
   min-height: 100svh;
   display: flex;
