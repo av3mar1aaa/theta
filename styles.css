@@ -110,3 +110,39 @@ body {
   background: rgba(0, 160, 60, 0.55);
   transform: none;
 }
+
+.event-info {
+  margin-top: clamp(1.25rem, 4vw, 1.75rem);
+  padding: clamp(1rem, 4vw, 1.5rem);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.event-line {
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.event-line:last-of-type {
+  margin-bottom: 0;
+}
+
+.event-line strong {
+  color: #ff2a2a;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.event-note {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: clamp(0.85rem, 3vw, 0.95rem);
+  font-style: italic;
+  opacity: 0.9;
+}

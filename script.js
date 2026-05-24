@@ -3,10 +3,12 @@
   const CONFIRMED_KEY = "theta:confirmed";
   const subscribeBtn = document.getElementById("subscribeBtn");
   const confirmedBtn = document.getElementById("confirmedBtn");
+  const eventInfo = document.getElementById("eventInfo");
 
   function showConfirmed() {
     subscribeBtn.hidden = true;
     confirmedBtn.hidden = false;
+    eventInfo.hidden = false;
   }
 
   if (localStorage.getItem(CONFIRMED_KEY) === "1") {
