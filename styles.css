@@ -111,6 +111,15 @@ body {
   transform: none;
 }
 
+.subscribe-hint {
+  margin-top: clamp(0.85rem, 3vw, 1.1rem);
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
 .event-info {
   margin-top: clamp(1.25rem, 4vw, 1.75rem);
   padding: clamp(1rem, 4vw, 1.5rem);

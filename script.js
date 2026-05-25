@@ -2,11 +2,13 @@
   const PENDING_KEY = "theta:pending";
   const CONFIRMED_KEY = "theta:confirmed";
   const subscribeBtn = document.getElementById("subscribeBtn");
+  const subscribeHint = document.getElementById("subscribeHint");
   const confirmedBtn = document.getElementById("confirmedBtn");
   const eventInfo = document.getElementById("eventInfo");
 
   function showConfirmed() {
     subscribeBtn.hidden = true;
+    subscribeHint.hidden = true;
     confirmedBtn.hidden = false;
     eventInfo.hidden = false;
   }
