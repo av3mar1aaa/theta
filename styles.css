@@ -147,6 +147,26 @@ body {
   letter-spacing: 0.03em;
 }
 
+.reset-link {
+  display: inline-block;
+  margin-top: clamp(1rem, 3vw, 1.25rem);
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: inherit;
+  font-size: clamp(0.8rem, 2.8vw, 0.9rem);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  transition: color 0.15s ease;
+}
+
+.reset-link:hover {
+  color: #fff;
+}
+
 .event-note {
   margin-top: 0.9rem;
   padding-top: 0.9rem;
